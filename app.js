@@ -1,21 +1,30 @@
-// Store selected travel type
-let selectedTravelType = null;
+// ---------- APPLICATION STATE ----------
+const appState = {
+  travelType: null,
+  destination: null,
+  duration: null,
+  climate: null,
+};
 
-// Get all travel type buttons
-const travelTypeButtons = document.querySelectorAll("#travel-type button");
+// ---------- GENERIC BUTTON HANDLER ----------
+const optionSections = document.querySelectorAll("section[data-category]");
 
-// Attach click event to each button
-travelTypeButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    // Remove active class from all buttons
-    travelTypeButtons.forEach((btn) => btn.classList.remove("active"));
+optionSections.forEach((section) => {
+  const category = section.dataset.category;
+  const buttons = section.querySelectorAll("button");
 
-    // Add active class to clicked button
-    button.classList.add("active");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      // Remove active class from all buttons in this section
+      buttons.forEach((btn) => btn.classList.remove("active"));
 
-    // Store selected value
-    selectedTravelType = button.dataset.value;
+      // Mark clicked button as active
+      button.classList.add("active");
 
-    console.log("Selected travel type:", selectedTravelType);
+      // Store selected value in app state
+      appState[category] = button.dataset.value;
+
+      console.log("Updated state:", appState);
+    });
   });
 });
