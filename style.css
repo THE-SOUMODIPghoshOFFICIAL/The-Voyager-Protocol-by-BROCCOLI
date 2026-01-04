@@ -64,3 +64,29 @@ footer {
   font-size: 0.85rem;
   color: #94a3b8;
 }
+
+/* ---------- OPTION BUTTONS ---------- */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.options button {
+  padding: 0.5rem 1rem;
+  background-color: #020617;
+  color: #e5e7eb;
+  border: 1px solid #1e293b;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.options button:hover {
+  background-color: #1e293b;
+}
+
+.options button.active {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
