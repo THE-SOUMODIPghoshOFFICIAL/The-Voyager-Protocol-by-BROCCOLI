@@ -1,0 +1,66 @@
+/* ---------- GLOBAL RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- BASE PAGE STYLES ---------- */
+body {
+  font-family: Arial, Helvetica, sans-serif, Helvetica, sans-serif;
+  background-color: #0f172a;
+  color: #eff1f5;
+  line-height: 1.6;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #020617;
+  border-bottom: 1px solid #1e293b;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header p {
+  font-size: 0.95rem;
+  color: #94a3b8;
+}
+
+/* ---------- MAIN LAYOUT ---------- */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+}
+
+section h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  color: #f8fafc;
+}
+
+/* ---------- RESULT AREA ---------- */
+#result {
+  min-height: 120px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
